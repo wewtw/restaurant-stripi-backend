@@ -1,0 +1,36 @@
+{
+  "connection": "default",
+  "collectionName": "drinks",
+  "info": {
+    "name": "drink",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": [
+      "created_at",
+      "updated_at"
+    ],
+    "comment": ""
+  },
+  "attributes": {
+    "price": {
+      "type": "float"
+    },
+    "name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "image": {
+      "model": "file",
+      "via": "related",
+      "plugin": "upload"
+    },
+    "restaurant": {
+      "model": "restaurant",
+      "via": "drinks"
+    }
+  }
+}
