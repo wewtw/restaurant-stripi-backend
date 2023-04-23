@@ -1,5 +1,3 @@
 node_modules
 api/order/controllers/Order.js
 
-.cache
-.tmp
